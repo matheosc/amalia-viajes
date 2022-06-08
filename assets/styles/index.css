@@ -1,0 +1,200 @@
+/* CSS GLOBAL */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #dfdfdf;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1,h2,h3,h4 {
+    text-transform: uppercase;
+}
+
+h1, h4 {
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 4px 2px 4px rgba(180, 180, 180, 0.9) ;
+}
+
+hr {
+    opacity: 0;
+}
+
+/* START MOBILE CSS */
+
+/* HEADER - Cabecera de página */
+
+header {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 5rem;
+}
+
+header, header * {
+    background-color: #fff;
+}
+
+header div p {
+    font-weight: 500;
+}
+
+/* HEADER LOGO */
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+div img {
+    height: 3.6rem;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main>h1, main>p {
+    margin: 1rem 3.2rem;
+}
+
+/* SECTION TRIPS */
+
+h3 {
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 4px 2px 4px rgba(240, 240, 240, 0.3);
+    max-width: 80%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article div p:last-child {
+    text-decoration: underline;
+}
+
+.trips__back {
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+}
+
+.trips__back div {
+    max-width: 80%;
+}
+
+#background1 {
+    background: linear-gradient(rgba(16, 16, 16, 0.537), rgba(16, 16, 16, 0.537)) ,url(../img/Santorini.jpg) fixed center;
+    background-size: cover;
+}
+
+#background2 {
+    background: linear-gradient(rgba(16, 16, 16, 0.537), rgba(16, 16, 16, 0.537)) ,url(../img/Manhattan.jpg) fixed center;
+    background-size: cover;
+}
+
+#background3 {
+    background: linear-gradient(rgba(16, 16, 16, 0.537), rgba(16, 16, 16, 0.537)) ,url(../img/Costa\ Rica.jpg) fixed center;
+    background-size: cover;
+}
+#background4 {
+    background: linear-gradient(rgba(16, 16, 16, 0.537), rgba(16, 16, 16, 0.537)) ,url(../img/Argentina.jpg) fixed center;
+    background-size: cover;
+}
+
+/* SECTION CONTACT */
+
+.section__contact, .section__contact * {
+    display: flex;
+    flex-direction: column;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#email *, #contact * {
+    margin: 1vw auto;
+}
+
+/* END MOBILE CSS */
+/* START DESKTOP CSS */
+
+@media (min-width: 768px) {
+
+/* GLOBAL */
+
+    p:not(.title) {
+        font-size: 18px;
+    }
+
+/* MAIN */
+
+    main {
+        min-height: 25vw;
+        line-height: 3vw;
+    }
+
+/* SECTION TRIPS */
+
+    article {
+        border: 1px solid #888;
+    }
+
+    .trips {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+/* SECTION CONTACT */
+
+    .section__contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: rgb(217,215,215);
+        background: linear-gradient(0deg, rgba(217,215,215,1) 33%, rgba(223,223,223,1) 100%); 
+    }
+
+    .section__contact hgroup {
+        min-height: 20vw;
+    }
+
+    #email, #contact {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #email *, #contact *{
+        margin: auto;
+    }
+
+    #contact h4 {
+        text-align: center;
+    }
+}
+
+
